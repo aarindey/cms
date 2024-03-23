@@ -73,6 +73,7 @@ export async function getPurchases(email: string) {
   const responses: Course[] = [];
 
   const promises = courses.map(async (course) => {
+    console.log('request goes out');
     const params = new URLSearchParams({
       email,
       itemtype: '10',
